@@ -10,7 +10,7 @@ public class MemoryClassLoader extends ClassLoader
 
 	public MemoryClassLoader()
 	{
-		mFiles = new HashMap<String, MemoryFileObject>();
+		mFiles = new HashMap<>();
 	}
 
 
@@ -35,7 +35,7 @@ public class MemoryClassLoader extends ClassLoader
 
 			CharSequence temp = mFiles.get(aName).getCharContent(true);
 			byte [] content = new byte[temp.length()];
-			for (int i = 0; i < temp.length(); i++) 
+			for (int i = 0; i < temp.length(); i++)
 			{
 				content[i] = (byte)temp.charAt(i);
 			}

@@ -33,6 +33,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public boolean delete()
 	{
 		//System.out.println("MemoryFileObject::delete");
@@ -40,6 +41,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public Modifier getAccessLevel()
 	{
 		//System.out.println("MemoryFileObject::getAccessLevel");
@@ -47,6 +49,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public Kind getKind()
 	{
 		//System.out.println("MemoryFileObject::getKind");
@@ -54,6 +57,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public long getLastModified()
 	{
 		//System.out.println("MemoryFileObject::getLastModified");
@@ -61,6 +65,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public String getName()
 	{
 		//System.out.println("MemoryFileObject::getName");
@@ -68,6 +73,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public NestingKind getNestingKind()
 	{
 		//System.out.println("MemoryFileObject::getNestingKind");
@@ -75,6 +81,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public InputStream openInputStream() throws IOException
 	{
 		//System.out.println("MemoryFileObject::openInputStream");
@@ -84,6 +91,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public OutputStream openOutputStream() throws IOException
 	{
 		//System.out.println("MemoryFileObject::openOutputStream");
@@ -102,6 +110,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public Reader openReader(boolean ignoreEncodingErrors) throws IOException
 	{
 		//System.out.println("MemoryFileObject::openReader");
@@ -109,6 +118,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public Writer openWriter() throws IOException
 	{
 		//System.out.println("MemoryFileObject::openWriter");
@@ -125,6 +135,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public URI toUri()
 	{
 		//System.out.println("MemoryFileObject::toUri");
@@ -139,6 +150,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public CharSequence getCharContent(boolean ignoreEncodingErrors) throws IOException
 	{
 		//System.out.println("MemoryFileObject::getCharContent");
@@ -146,6 +158,7 @@ public class MemoryFileObject implements JavaFileObject
 	}
 
 
+	@Override
 	public boolean isNameCompatible(String simpleName, Kind kind)
 	{
 		//System.out.println("MemoryFileObject::isNameCompatible name:" + simpleName+", Kind:"+ kind);

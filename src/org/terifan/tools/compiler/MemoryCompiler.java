@@ -19,7 +19,7 @@ public class MemoryCompiler
 
 	public MemoryCompiler()
 	{
-		mSourceFiles = new ArrayList<MemoryFileObject>();
+		mSourceFiles = new ArrayList<>();
 		mClassLoader = new MemoryClassLoader();
 	}
 
@@ -55,12 +55,12 @@ public class MemoryCompiler
 			throw new RuntimeException("A Java compiler is not installed in this Java Runtime Environment.");
 		}
 
-		DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<JavaFileObject>();
-		MemoryFileManager fileManager = new MemoryFileManager(compiler.getStandardFileManager(diagnostics, null, null), mClassLoader);
+		DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
 
-		compiler.getTask(aCompilerOutput, fileManager, diagnostics, null, null, mSourceFiles).call();
-
-		fileManager.close();
+		try (MemoryFileManager fileManager = new MemoryFileManager(compiler.getStandardFileManager(diagnostics, null, null), mClassLoader))
+		{
+			compiler.getTask(aCompilerOutput, fileManager, diagnostics, null, null, mSourceFiles).call();
+		}
 
 		return diagnostics;
 	}
