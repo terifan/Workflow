@@ -1,11 +1,11 @@
-package test;
+package samples;
 
 import javax.swing.JFrame;
 import org.terifan.apps.workflow.client.ClientApplication;
 import org.terifan.util.ErrorReportWindow;
 
 
-public class Test
+public class StartEditor
 {
 	public static void main(String... args)
 	{

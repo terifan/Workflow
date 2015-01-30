@@ -146,7 +146,7 @@ public class ClientApplication extends JFrame
 		{
 			URL url = new URL(aAddress);
 
-			final JTextArea textArea = new JTextArea();
+			JTextArea textArea = new JTextArea();
 			JScrollPane scrollPane = new JScrollPane(textArea);
 
 			OutputStream outputStream = new OutputStream()
