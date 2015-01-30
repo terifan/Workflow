@@ -4,7 +4,7 @@ import java.util.Locale;
 import javax.tools.Diagnostic;
 import javax.tools.DiagnosticCollector;
 import javax.tools.JavaFileObject;
-import org.terifan.tools.compiler.MemoryCompiler;
+import org.terifan.util.compiler.MemoryCompiler;
 import org.terifan.util.log.Log;
 
 
