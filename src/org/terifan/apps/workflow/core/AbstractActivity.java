@@ -76,13 +76,13 @@ public abstract class AbstractActivity
 
 			for (Class type : types)
 			{
-				mAccessorFields.put(type, new ArrayList<String>());
+				mAccessorFields.put(type, new ArrayList<>());
 			}
 
 			if (!mSource.isEmpty())
 			{
-				Executable executable = Compiler.compile(this, mSource.toString());
-				FieldMap map = new FieldMap(executable).setIncludeAnnotations(types);
+				Executable executable = Compiler.compile(this, mSource);
+				FieldMap map = new FieldMap(executable, types);
 
 				for (String name : map.getFieldNames())
 				{
@@ -171,8 +171,8 @@ public abstract class AbstractActivity
 	{
 		aVisitor.visit(this);
 	}
-	
-	
+
+
 	@Override
 	public AbstractActivity clone()
 	{

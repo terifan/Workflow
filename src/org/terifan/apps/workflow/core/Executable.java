@@ -40,10 +40,10 @@ public abstract class Executable
 		return mIdentity;
 	}
 
-	
+
 	public void pushState(WorkflowEngine aWorkflowEngine, State aState)
 	{
-		FieldMap map = new FieldMap(this).setIncludeAnnotations(In.class, Out.class, InOut.class);
+		FieldMap map = new FieldMap(this, In.class, Out.class, InOut.class);
 
 		for (String name : map.getFieldNames())
 		{
@@ -73,7 +73,7 @@ public abstract class Executable
 
 	public void popState(WorkflowEngine aWorkflowEngine, State aState)
 	{
-		FieldMap map = new FieldMap(this).setIncludeAnnotations(In.class, Out.class, InOut.class);
+		FieldMap map = new FieldMap(this, In.class, Out.class, InOut.class);
 
 		for (String name : map.getFieldNames())
 		{
@@ -99,8 +99,8 @@ public abstract class Executable
 			}
 		}
 	}
-	
-	
+
+
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target({ElementType.TYPE})
 	public @interface Name
