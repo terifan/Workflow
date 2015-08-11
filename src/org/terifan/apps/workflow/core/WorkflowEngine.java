@@ -1,6 +1,6 @@
 package org.terifan.apps.workflow.core;
 
-import org.terifan.util.bundle.Bundle;
+import org.terifan.bundle.Bundle;
 import org.terifan.net.rpc.client.RPCConnection;
 import org.terifan.util.log.Log;
 

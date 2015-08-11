@@ -3,7 +3,7 @@ package org.terifan.apps.workflow.activities;
 import org.terifan.apps.workflow.core.Leaf;
 import org.terifan.apps.workflow.core.State;
 import org.terifan.apps.workflow.core.WorkflowEngine;
-import org.terifan.util.bundle.Bundle;
+import org.terifan.bundle.Bundle;
 
 
 public class DelayActivity extends Leaf

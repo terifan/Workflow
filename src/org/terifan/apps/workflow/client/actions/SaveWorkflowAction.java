@@ -6,8 +6,8 @@ import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import org.terifan.apps.workflow.client.workflow_pane.WorkflowPane;
-import org.terifan.util.bundle.BinaryEncoder;
-import org.terifan.util.bundle.Bundle;
+import org.terifan.bundle.BinaryEncoder;
+import org.terifan.bundle.Bundle;
 
 
 public class SaveWorkflowAction extends AbstractAction
