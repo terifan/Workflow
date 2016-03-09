@@ -8,7 +8,7 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import org.terifan.apps.workflow.client.workflow_pane.WorkflowPane;
 import org.terifan.apps.workflow.core.Workflow;
-import org.terifan.bundle.BinaryDecoder;
+import org.terifan.bundle.Bundle;
 
 
 public class OpenWorkflowAction extends AbstractAction
@@ -40,7 +40,7 @@ public class OpenWorkflowAction extends AbstractAction
 
 				try (InputStream in = new FileInputStream(chooser.getSelectedFile()))
 				{
-					w.deserialize(new BinaryDecoder().unmarshal(in));
+					w.deserialize(new Bundle().unmarshal(in));
 				}
 
 				mWorkflowPane.setWorkflowFile(chooser.getSelectedFile());

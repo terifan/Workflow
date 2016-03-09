@@ -6,7 +6,6 @@ import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import org.terifan.apps.workflow.client.workflow_pane.WorkflowPane;
-import org.terifan.bundle.BinaryEncoder;
 import org.terifan.bundle.Bundle;
 
 
@@ -39,7 +38,7 @@ public class SaveWorkflowAction extends AbstractAction
 
 				Bundle bundle = new Bundle();
 				mWorkflowPane.getWorkflow().serialize(bundle);
-				byte [] buffer = new BinaryEncoder().marshal(bundle);
+				byte [] buffer = bundle.marshal();
 
 				try (FileOutputStream fos = new FileOutputStream(chooser.getSelectedFile()))
 				{
