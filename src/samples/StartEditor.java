@@ -1,7 +1,7 @@
 package samples;
 
 import javax.swing.JFrame;
-import org.terifan.apps.workflow.client.ClientApplication;
+import org.terifan.workflow.client.ClientApplication;
 import org.terifan.util.ErrorReportWindow;
 
 
