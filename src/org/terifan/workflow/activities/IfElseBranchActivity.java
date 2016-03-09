@@ -21,7 +21,7 @@ public class IfElseBranchActivity extends SequentialGroup
 	@Override
 	public void initialize()
 	{
-		setSource("import org.terifan.apps.workflow.activities.IfElseBranchExecutable;\n"
+		setSource("import org.terifan.workflow.activities.IfElseBranchExecutable;\n"
 				+ "\n"
 				+ "public class Solution extends IfElseBranchExecutable\n"
 				+ "{\n"

@@ -27,7 +27,7 @@ public class MapReduceActivity extends SequentialGroup
 	public void initialize()
 	{
 //		setSource(
-//"import org.terifan.apps.workflow.activities.MapReduceExecutable;\n" +
+//"import org.terifan.workflow.activities.MapReduceExecutable;\n" +
 //"import java.util.*;\n" +
 //"\n" +
 //"public class Solution extends MapReduceExecutable\n" +
@@ -65,7 +65,7 @@ public class MapReduceActivity extends SequentialGroup
 //
 //		CodeActivity code = new CodeActivity();
 //		code.setSource(
-//"import org.terifan.apps.workflow.core.Executable;\n" +
+//"import org.terifan.workflow.core.Executable;\n" +
 //"import java.util.*;\n" +
 //"\n" +
 //"public class Solution extends Executable\n" +
@@ -96,7 +96,7 @@ public class MapReduceActivity extends SequentialGroup
 //		this.addChild(seq);
 
 		setSource(
-"import org.terifan.apps.workflow.activities.MapReduceExecutable;\n" +
+"import org.terifan.workflow.activities.MapReduceExecutable;\n" +
 "\n" +
 "public class Solution extends MapReduceExecutable\n" +
 "{\n" +
@@ -119,7 +119,7 @@ public class MapReduceActivity extends SequentialGroup
 
 		CodeActivity code1 = new CodeActivity();
 		code1.setSource(
-"import org.terifan.apps.workflow.core.Executable;\n" +
+"import org.terifan.workflow.core.Executable;\n" +
 "import java.util.*;\n" +
 "\n" +
 "public class Solution extends Executable\n" +
@@ -139,7 +139,7 @@ public class MapReduceActivity extends SequentialGroup
 
 		CodeActivity code2 = new CodeActivity();
 		code2.setSource(
-"import org.terifan.apps.workflow.core.Executable;\n" +
+"import org.terifan.workflow.core.Executable;\n" +
 "import java.util.*;\n" +
 "\n" +
 "public class Solution extends Executable\n" +

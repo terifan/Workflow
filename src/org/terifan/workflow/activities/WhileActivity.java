@@ -21,7 +21,7 @@ public class WhileActivity extends SequentialGroup
 	@Override
 	public void initialize()
 	{
-		setSource("import org.terifan.apps.workflow.activities.WhileExecutable;\n"
+		setSource("import org.terifan.workflow.activities.WhileExecutable;\n"
 				+ "\n"
 				+ "public class Solution extends WhileExecutable\n"
 				+ "{\n"

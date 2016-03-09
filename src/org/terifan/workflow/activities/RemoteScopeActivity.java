@@ -27,7 +27,7 @@ public class RemoteScopeActivity extends SequentialGroup
 	@Override
 	public void initialize()
 	{
-		setSource("import org.terifan.apps.workflow.activities.RemoteScopeExecutable;\n"
+		setSource("import org.terifan.workflow.activities.RemoteScopeExecutable;\n"
 				+ "\n"
 				+ "public class Solution extends RemoteScopeExecutable\n"
 				+ "{\n"

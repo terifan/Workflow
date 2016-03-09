@@ -26,7 +26,7 @@ public class CodeActivity extends Leaf
 		if (getSource() == null || getSource().isEmpty())
 		{
 			setSource(
-			  "import org.terifan.apps.workflow.core.Executable;\n"
+			  "import org.terifan.workflow.core.Executable;\n"
 			+ "\n"
 			+ "public class Solution extends Executable\n"
 			+ "{\n"
