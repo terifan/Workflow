@@ -5,8 +5,8 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.vectorgraphics.Layer;
-import org.terifan.ui.vectorgraphics.Anchor;
+import org.terifan.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Anchor;
 import org.terifan.ui.GradientStyle;
 import org.terifan.ui.StrokeStyle;
 

@@ -1,6 +1,6 @@
 package org.terifan.workflow.client.workflow_pane;
 
-import org.terifan.ui.vectorgraphics.Region;
+import org.terifan.vectorgraphics.Region;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

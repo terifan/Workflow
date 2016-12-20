@@ -7,8 +7,8 @@ import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.workflow.core.ValueList;
 import org.terifan.workflow.core.Workflow;
 import org.terifan.workflow.client.activities_layout.AbstractActivityLayout;
-import org.terifan.ui.vectorgraphics.Layer;
-import org.terifan.ui.vectorgraphics.Anchor;
+import org.terifan.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Anchor;
 import org.terifan.ui.StrokeStyle;
 import org.terifan.ui.StyleSheet;
 

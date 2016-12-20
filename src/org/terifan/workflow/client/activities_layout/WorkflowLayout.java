@@ -3,7 +3,7 @@ package org.terifan.workflow.client.activities_layout;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import org.terifan.workflow.core.AbstractActivity;
-import org.terifan.ui.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Layer;
 import org.terifan.ui.StyleSheet;
 
 

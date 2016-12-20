@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.workflow.core.ValueList;
 import org.terifan.workflow.core.ValueListChangeListener;
-import org.terifan.ui.vectorgraphics.RenderStateListener;
+import org.terifan.vectorgraphics.RenderStateListener;
 
 
 class WorkflowPaneRenderStateListener implements RenderStateListener, ValueListChangeListener<String, AbstractActivity>

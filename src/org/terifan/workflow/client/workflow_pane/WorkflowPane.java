@@ -24,7 +24,7 @@ import org.terifan.workflow.client.activity_toolbox.ActivityToolbox;
 import org.terifan.workflow.core.ActivityState;
 import org.terifan.workflow.core.Group;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.vectorgraphics.Canvas;
+import org.terifan.vectorgraphics.Canvas;
 
 
 public class WorkflowPane extends Canvas

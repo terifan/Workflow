@@ -3,7 +3,7 @@ package org.terifan.workflow.client.workflow_pane;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import org.terifan.ui.vectorgraphics.Region;
+import org.terifan.vectorgraphics.Region;
 
 
 public class DropRegion extends Region

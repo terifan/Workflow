@@ -1,7 +1,7 @@
 package org.terifan.workflow.client.workflow_pane;
 
-import org.terifan.ui.vectorgraphics.Region;
-import org.terifan.ui.vectorgraphics.RegionSelector;
+import org.terifan.vectorgraphics.Region;
+import org.terifan.vectorgraphics.RegionSelector;
 
 
 public class RegionFilter implements RegionSelector

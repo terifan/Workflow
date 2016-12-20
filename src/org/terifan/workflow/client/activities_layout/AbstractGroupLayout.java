@@ -10,11 +10,11 @@ import org.terifan.workflow.core.Group;
 import org.terifan.workflow.client.workflow_pane.RegionAction;
 import org.terifan.workflow.client.workflow_pane.RegionData;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.vectorgraphics.Layer;
-import org.terifan.ui.vectorgraphics.Region;
+import org.terifan.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Region;
 import org.terifan.ui.GradientStyle;
 import org.terifan.ui.StrokeStyle;
-import org.terifan.ui.vectorgraphics.Anchor;
+import org.terifan.vectorgraphics.Anchor;
 
 
 public abstract class AbstractGroupLayout extends AbstractActivityLayout // implements Iterable<ActivityLayout>

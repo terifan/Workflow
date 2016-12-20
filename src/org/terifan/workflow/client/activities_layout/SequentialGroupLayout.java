@@ -9,8 +9,8 @@ import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.workflow.client.workflow_pane.RegionAction;
 import org.terifan.workflow.client.workflow_pane.RegionData;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.vectorgraphics.Layer;
-import org.terifan.ui.vectorgraphics.Anchor;
+import org.terifan.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Anchor;
 
 
 public class SequentialGroupLayout extends AbstractGroupLayout

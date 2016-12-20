@@ -3,7 +3,7 @@ package org.terifan.workflow.client.activities_layout;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.vectorgraphics.Layer;
+import org.terifan.vectorgraphics.Layer;
 
 
 public class WhileLayout extends SequentialGroupLayout
