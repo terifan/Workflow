@@ -8,7 +8,7 @@ import org.terifan.workflow.client.workflow_pane.RegionAction;
 import org.terifan.workflow.client.workflow_pane.RegionData;
 import org.terifan.ui.StyleSheet;
 import org.terifan.ui.vectorgraphics.Layer;
-import org.terifan.ui.Anchor;
+import org.terifan.ui.vectorgraphics.Anchor;
 
 
 public class ParallelGroupLayout extends AbstractGroupLayout
