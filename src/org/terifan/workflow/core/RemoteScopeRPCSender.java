@@ -19,7 +19,7 @@ public class RemoteScopeRPCSender extends RemoteServiceStub
 		}
 		else if (response instanceof Exception)
 		{
-			throw new RuntimeException((Exception)response);
+			throw new IllegalStateException((Exception)response);
 		}
 
 		Log.out.println("rpc-response="+response);

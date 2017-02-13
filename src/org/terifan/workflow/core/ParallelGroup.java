@@ -32,7 +32,7 @@ public abstract class ParallelGroup extends Group
 		}
 		catch (InterruptedException e)
 		{
-			throw new RuntimeException(e);
+			throw new IllegalStateException(e);
 		}
 	}
 	

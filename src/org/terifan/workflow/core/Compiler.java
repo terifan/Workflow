@@ -103,7 +103,7 @@ public class Compiler
 		{
 			e.printStackTrace(Log.out);
 
-			throw new RuntimeException(e);
+			throw new IllegalStateException(e);
 		}
 	}
 }

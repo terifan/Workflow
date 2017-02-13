@@ -65,7 +65,7 @@ public class IfElseBranchActivity extends SequentialGroup
 	{
 		if (mExecutable == null)
 		{
-			throw new RuntimeException("Not compiled");
+			throw new IllegalStateException("Not compiled");
 		}
 
 //		FieldMap map = new FieldMap(mExecutable).setIncludeAnnotations(Executable.In.class, Executable.Out.class, Executable.InOut.class);
@@ -79,7 +79,7 @@ public class IfElseBranchActivity extends SequentialGroup
 //
 //			if (inOut != null || out != null)
 //			{
-//				throw new RuntimeException("IfElseBranchActivity is not allowed to change the state.");
+//				throw new IllegalStateException("IfElseBranchActivity is not allowed to change the state.");
 //			}
 //
 //			if (in != null)

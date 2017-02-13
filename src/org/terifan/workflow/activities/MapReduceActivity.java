@@ -230,7 +230,7 @@ public class MapReduceActivity extends SequentialGroup
 		}
 		catch (InterruptedException e)
 		{
-			throw new RuntimeException(e);
+			throw new IllegalStateException(e);
 		}
 	}
 

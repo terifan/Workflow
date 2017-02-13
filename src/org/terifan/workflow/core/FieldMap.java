@@ -61,7 +61,7 @@ class FieldMap
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
 		{
 			return null;
-//			throw new RuntimeException(e);
+//			throw new IllegalStateException(e);
 		}
 	}
 
@@ -83,7 +83,7 @@ class FieldMap
 		}
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
 		{
-			throw new RuntimeException(e);
+			throw new IllegalStateException(e);
 		}
 	}
 
