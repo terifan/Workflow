@@ -4,7 +4,7 @@ import java.awt.datatransfer.DataFlavor;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
-import org.terifan.bundle.Bundle;
+import org.terifan.bundle.old.Bundle;
 import org.terifan.util.log.Log;
 
 

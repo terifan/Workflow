@@ -1,7 +1,7 @@
 package org.terifan.workflow.activities;
 
 import org.terifan.workflow.core.ParallelGroup;
-import org.terifan.bundle.Bundle;
+import org.terifan.bundle.old.Bundle;
 
 
 public class ParallelActivity extends ParallelGroup

@@ -1,6 +1,6 @@
 package org.terifan.workflow.core;
 
-import org.terifan.bundle.Bundle;
+import org.terifan.bundle.old.Bundle;
 import org.terifan.net.rpc.client.RemoteServiceStub;
 import org.terifan.net.rpc.shared.ServiceName;
 import org.terifan.util.log.Log;

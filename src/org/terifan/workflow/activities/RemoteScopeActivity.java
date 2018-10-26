@@ -10,7 +10,7 @@ import org.terifan.workflow.core.SequentialGroup;
 import org.terifan.workflow.core.State;
 import org.terifan.workflow.core.WorkflowEngine;
 import org.terifan.workflow.core.WorkflowVisitor;
-import org.terifan.bundle.Bundle;
+import org.terifan.bundle.old.Bundle;
 
 
 public class RemoteScopeActivity extends SequentialGroup

@@ -2,7 +2,7 @@ package org.terifan.workflow.core;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import org.terifan.bundle.Bundle;
+import org.terifan.bundle.old.Bundle;
 
 
 public abstract class Group extends AbstractActivity implements Iterable<AbstractActivity>
