@@ -55,7 +55,6 @@ public class ClientApplication extends JFrame
 
 		PropertyGridModel mPropertyGridModel = new PropertyGridModel();
 		mPropertyGrid = new PropertyGrid(mPropertyGridModel);
-		mPropertyGrid.setShowDescription(false);
 
 		JToolBar toolbar = new JToolBar();
 		toolbar.add(new JButton(mWorkflowPane.getAction(Actions.SaveWorkflow)));
