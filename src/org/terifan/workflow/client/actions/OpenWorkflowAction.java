@@ -8,7 +8,7 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import org.terifan.workflow.client.workflow_pane.WorkflowPane;
 import org.terifan.workflow.core.Workflow;
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Bundle;
 
 
 public class OpenWorkflowAction extends AbstractAction

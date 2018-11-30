@@ -4,7 +4,7 @@ import org.terifan.workflow.core.Compiler;
 import org.terifan.workflow.core.State;
 import org.terifan.workflow.core.Workflow;
 import org.terifan.workflow.core.WorkflowEngine;
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Bundle;
 import org.terifan.net.rpc.server.AbstractRemoteService;
 import org.terifan.net.rpc.server.AbstractRemoteService.RemoteMethod;
 import org.terifan.net.rpc.shared.ServiceName;

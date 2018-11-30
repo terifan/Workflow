@@ -2,7 +2,8 @@ package org.terifan.workflow.core;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Array;
+import org.terifan.bundle.Bundle;
 
 
 public abstract class Group extends AbstractActivity implements Iterable<AbstractActivity>
@@ -99,7 +100,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 			list.add(bundle);
 		}
 
-		aBundle.putBundleArrayList("Children", list);
+		aBundle.putArray("Children", Array.of(list));
 	}
 
 
@@ -110,7 +111,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 
 		mChildren.clear();
 
-		for (Bundle bundle : aBundle.getBundleArrayList("Children"))
+		for (Bundle bundle : aBundle.getBundleArray("Children"))
 		{
 			try
 			{

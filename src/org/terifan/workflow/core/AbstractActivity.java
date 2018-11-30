@@ -4,8 +4,7 @@ import java.awt.datatransfer.DataFlavor;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
-import org.terifan.bundle.old.Bundle;
-import org.terifan.util.log.Log;
+import org.terifan.bundle.Bundle;
 
 
 public abstract class AbstractActivity
@@ -154,8 +153,8 @@ public abstract class AbstractActivity
 	{
 		aBundle.putString("Class", getClass().getName());
 		aBundle.putString("Label", mLabel);
-		aBundle.putInt("State", mState.ordinal());
-		aBundle.putString("SourceCode", mSource.toString());
+		aBundle.putNumber("State", mState.ordinal());
+		aBundle.putString("SourceCode", mSource);
 	}
 
 

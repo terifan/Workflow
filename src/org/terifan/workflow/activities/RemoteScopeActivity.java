@@ -1,6 +1,6 @@
 package org.terifan.workflow.activities;
 
-import java.util.ArrayList;
+import org.terifan.bundle.Array;
 import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.workflow.core.ActivityState;
 import org.terifan.workflow.core.Compiler;
@@ -10,7 +10,7 @@ import org.terifan.workflow.core.SequentialGroup;
 import org.terifan.workflow.core.State;
 import org.terifan.workflow.core.WorkflowEngine;
 import org.terifan.workflow.core.WorkflowVisitor;
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Bundle;
 
 
 public class RemoteScopeActivity extends SequentialGroup
@@ -66,7 +66,7 @@ public class RemoteScopeActivity extends SequentialGroup
 			}
 		});
 
-		ArrayList<Bundle> list = new ArrayList<>();
+		Array list = new Array();
 
 		for (AbstractActivity activity : mChildren)
 		{
@@ -76,7 +76,7 @@ public class RemoteScopeActivity extends SequentialGroup
 		}
 
 		Bundle bundle = new Bundle();
-		bundle.putBundleArrayList("Children", list);
+		bundle.putArray("Children", list);
 		mSubgraph = bundle;
 
 		return true;

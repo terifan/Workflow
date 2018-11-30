@@ -1,6 +1,6 @@
 package org.terifan.workflow.core;
 
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Bundle;
 import org.terifan.net.rpc.client.RPCConnection;
 import org.terifan.util.log.Log;
 
@@ -50,8 +50,8 @@ public class WorkflowEngine
 	{
 		start(aState, aState);
 	}
-	
-	
+
+
 	public void start(State aInState, State aOutState)
 	{
 		Log.out.println("Start executing workflow");

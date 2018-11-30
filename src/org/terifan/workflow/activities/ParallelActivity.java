@@ -1,7 +1,7 @@
 package org.terifan.workflow.activities;
 
 import org.terifan.workflow.core.ParallelGroup;
-import org.terifan.bundle.old.Bundle;
+import org.terifan.bundle.Bundle;
 
 
 public class ParallelActivity extends ParallelGroup
@@ -40,7 +40,7 @@ public class ParallelActivity extends ParallelGroup
 	{
 		super.serialize(aBundle);
 
-		aBundle.putInt("MaxThreadPercent", mMaxThreadPercent);
+		aBundle.putNumber("MaxThreadPercent", mMaxThreadPercent);
 	}
 
 
