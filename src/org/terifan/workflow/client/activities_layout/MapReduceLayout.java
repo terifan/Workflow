@@ -10,7 +10,7 @@ import org.terifan.ui.StyleSheet;
 
 
 
-public class MapReduceLayout extends ParallelGroupLayout
+public class MapReduceLayout extends HorizontalGroupLayout
 {
 	public MapReduceLayout()
 	{

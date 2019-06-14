@@ -1,6 +1,6 @@
 package org.terifan.workflow.client.activities_layout;
 
 
-public class ParallelLayout extends ParallelGroupLayout
+public class ParallelLayout extends HorizontalGroupLayout
 {
 }

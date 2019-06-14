@@ -17,6 +17,18 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 	}
 
 
+	@Override
+	public void initialize()
+	{
+		super.initialize();
+
+		for (AbstractActivity activity : mChildren)
+		{
+			activity.initialize();
+		}
+	}
+
+
 	public AbstractActivity getChild(int aIndex)
 	{
 		return mChildren.get(aIndex);

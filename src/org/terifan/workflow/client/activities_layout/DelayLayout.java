@@ -2,7 +2,6 @@ package org.terifan.workflow.client.activities_layout;
 
 import javax.swing.JSlider;
 import org.terifan.workflow.activities.DelayActivity;
-import org.terifan.util.log.Log;
 
 
 public class DelayLayout extends LeafLayout

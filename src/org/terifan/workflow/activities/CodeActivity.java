@@ -26,15 +26,15 @@ public class CodeActivity extends Leaf
 		if (getSource() == null || getSource().isEmpty())
 		{
 			setSource(
-			  "import org.terifan.workflow.core.Executable;\n"
-			+ "\n"
-			+ "public class Solution extends Executable\n"
-			+ "{\n"
-			+ "	@Override\n"
-			+ "	public void run()\n"
-			+ "	{\n"
-			+ "	}\n"
-			+ "}");
+				"import org.terifan.workflow.core.Executable;\n"
+				+ "\n"
+				+ "public class Solution extends Executable\n"
+				+ "{\n"
+				+ "	@Override\n"
+				+ "	public void run()\n"
+				+ "	{\n"
+				+ "	}\n"
+				+ "}");
 		}
 	}
 
