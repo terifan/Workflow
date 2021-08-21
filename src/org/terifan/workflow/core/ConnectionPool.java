@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import org.terifan.util.Pool;
 import org.terifan.net.rpc.client.RPCConnection;
-import org.terifan.util.log.Log;
 
 
 public class ConnectionPool extends Pool<RPCConnection>
@@ -26,7 +25,7 @@ public class ConnectionPool extends Pool<RPCConnection>
 	protected RPCConnection create()
 	{
 		int i = mNextIndex++ % mEndPoints.size();
-		
+
 		EndPoint endPoint = mEndPoints.get(i);
 
 		RPCConnection conn = new RPCConnection(endPoint.url, endPoint.userName, endPoint.password);
@@ -39,7 +38,7 @@ public class ConnectionPool extends Pool<RPCConnection>
 
 
 	@Override
-	protected void destroy(RPCConnection aConnection)
+	protected void destroy(RPCConnection aConnection, String aReason)
 	{
 		aConnection.close();
 	}
@@ -56,8 +55,8 @@ public class ConnectionPool extends Pool<RPCConnection>
 	{
 		mEndPoints.add(new EndPoint(aURL, aUserName, aPassword, log));
 	}
-	
-	
+
+
 	class EndPoint
 	{
 		URL url;
