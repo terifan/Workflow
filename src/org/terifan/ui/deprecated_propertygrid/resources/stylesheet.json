@@ -1,0 +1,33 @@
+{
+	"collapse_button": "resources/collapse_button_arrow.png",
+	"expand_button": "resources/expand_button_arrow.png",
+
+	"text_foreground": [0,0,0],
+	"text_background": [255,255,255],
+	"text_foreground_disabled": [128,128,128],
+	"text_background_disabled": [0,0,0],
+	"text_foreground_readonly": [128,128,128],
+	"text_background_readonly": [255,255,255],
+	"text_foreground_selected": [255,255,255],
+	"text_background_selected": "3399FF",
+	"indent_foreground_label": [0,0,0],
+	"indent_foreground_value": [128,128,128],
+	"indent_background": [224,234,249],
+	"---indent_background": [244,247,252],
+	"grid": [224,234,249],
+	"---grid": [244,247,252],
+	
+	"colorbox": [128,128,128],
+
+	"item_font": ["arial","plain",11],
+	"item_changed": ["arial","bold",11],
+	"group_font": ["arial","bold",11],
+	"group_font_value": ["arial","plain",11],
+
+	"divider_position": 150,
+	"indent_width": 16,
+	"row_padding": 6,
+
+	"dropdown_icon": "resources/dropdown_button.png",
+	"popup_icon": "resources/popup_button.png"
+}
