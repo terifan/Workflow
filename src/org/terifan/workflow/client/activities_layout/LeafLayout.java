@@ -7,8 +7,8 @@ import java.awt.image.BufferedImage;
 import org.terifan.ui.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Anchor;
-import org.terifan.ui.GradientStyleFactory;
-import org.terifan.ui.StrokeStyleFactory;
+import org.terifan.workflow.util.GradientStyleFactory;
+import org.terifan.workflow.util.StrokeStyleFactory;
 
 
 public abstract class LeafLayout extends AbstractActivityLayout
