@@ -55,7 +55,7 @@ public class ServerApplication
 
 	public void stop()
 	{
-		mHttpServer.close(true);
+		mHttpServer.shutdown(true);
 	}
 
 

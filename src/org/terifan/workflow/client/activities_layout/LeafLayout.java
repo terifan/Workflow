@@ -7,8 +7,8 @@ import java.awt.image.BufferedImage;
 import org.terifan.ui.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Anchor;
-import org.terifan.ui.GradientStyle;
-import org.terifan.ui.StrokeStyle;
+import org.terifan.ui.GradientStyleFactory;
+import org.terifan.ui.StrokeStyleFactory;
 
 
 public abstract class LeafLayout extends AbstractActivityLayout
@@ -38,10 +38,10 @@ public abstract class LeafLayout extends AbstractActivityLayout
 		}
 
 		aLayer.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		aLayer.setPaint(Enum.valueOf(GradientStyle.class, style.getString("backStyle").toUpperCase()).createGradientPaint(bounds, style.getColor("backStart"), style.getColor("backEnd")));
+		aLayer.setPaint(Enum.valueOf(GradientStyleFactory.class, style.getString("backStyle").toUpperCase()).createGradientPaint(bounds, style.getColor("backStart"), style.getColor("backEnd")));
 		aLayer.fillRoundRect(bounds.x, bounds.y, bounds.width, bounds.height, 10, 10);
 		aLayer.setColor(style.getColor("border"));
-		aLayer.setStroke(Enum.valueOf(StrokeStyle.class, style.getString("borderStyle").toUpperCase()).createBasicStroke(1));
+		aLayer.setStroke(Enum.valueOf(StrokeStyleFactory.class, style.getString("borderStyle").toUpperCase()).createBasicStroke(1));
 		aLayer.drawRoundRect(bounds.x, bounds.y, bounds.width, bounds.height, 10, 10);
 		aLayer.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 

@@ -24,8 +24,8 @@ import org.terifan.workflow.core.ConnectionPool;
 import org.terifan.workflow.server.ServerApplication;
 import org.terifan.ui.StyleSheet;
 import org.terifan.ui.Utilities;
-import org.terifan.ui.propertygrid.PropertyGrid;
-import org.terifan.ui.propertygrid.PropertyGridModel;
+import org.terifan.ui.deprecated_propertygrid.PropertyGrid;
+import org.terifan.ui.deprecated_propertygrid.PropertyGridModel;
 import org.terifan.util.ErrorReportWindow;
 
 

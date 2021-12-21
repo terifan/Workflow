@@ -9,7 +9,7 @@ import org.terifan.workflow.core.Workflow;
 import org.terifan.workflow.client.activities_layout.AbstractActivityLayout;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Anchor;
-import org.terifan.ui.StrokeStyle;
+import org.terifan.ui.StrokeStyleFactory;
 import org.terifan.ui.StyleSheet;
 
 
@@ -51,7 +51,7 @@ public class WorkflowPaneRenderer extends Thread
 			mWorkflowPane.setOpaque(true);
 
 			Stroke oldStroke = focusLayer.getStroke();
-			Stroke dotStroke = StrokeStyle.DOT.createBasicStroke(1);
+			Stroke dotStroke = StrokeStyleFactory.DOT.createBasicStroke(1);
 			for (AbstractActivity activity : mSelections)
 			{
 				AbstractActivityLayout layout = mWorkflowPane.getActivityLayout(activity);

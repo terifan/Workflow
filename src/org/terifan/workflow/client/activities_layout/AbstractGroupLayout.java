@@ -12,8 +12,8 @@ import org.terifan.workflow.client.workflow_pane.RegionData;
 import org.terifan.ui.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Region;
-import org.terifan.ui.GradientStyle;
-import org.terifan.ui.StrokeStyle;
+import org.terifan.ui.GradientStyleFactory;
+import org.terifan.ui.StrokeStyleFactory;
 import org.terifan.vectorgraphics.Anchor;
 
 
@@ -58,10 +58,10 @@ public abstract class AbstractGroupLayout extends AbstractActivityLayout // impl
 		Stroke oldStroke = aLayer.getStroke();
 
 		aLayer.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-		aLayer.setPaint(Enum.valueOf(GradientStyle.class, style.getString("backStyle").toUpperCase()).createGradientPaint(bounds, style.getColor("backStart"), style.getColor("backEnd")));
+		aLayer.setPaint(Enum.valueOf(GradientStyleFactory.class, style.getString("backStyle").toUpperCase()).createGradientPaint(bounds, style.getColor("backStart"), style.getColor("backEnd")));
 		aLayer.fillRoundRect(bounds.x, bounds.y, bounds.width, bounds.height, 10, 10);
 		aLayer.setColor(style.getColor("border"));
-		aLayer.setStroke(Enum.valueOf(StrokeStyle.class, style.getString("borderStyle").toUpperCase()).createBasicStroke(1));
+		aLayer.setStroke(Enum.valueOf(StrokeStyleFactory.class, style.getString("borderStyle").toUpperCase()).createBasicStroke(1));
 		aLayer.drawRoundRect(bounds.x, bounds.y, bounds.width, bounds.height, 15, 15);
 		aLayer.setStroke(oldStroke);
 
