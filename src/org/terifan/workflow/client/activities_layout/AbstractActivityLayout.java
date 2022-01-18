@@ -18,9 +18,9 @@ import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Region;
 import org.terifan.vectorgraphics.Anchor;
 import org.terifan.ui.StyleSheet;
-import org.terifan.ui.sourceeditor.Document;
-import org.terifan.ui.sourceeditor.JavaSyntaxParser;
-import org.terifan.ui.sourceeditor.SourceEditor;
+import org.terifan.sourcecodeeditor.Document;
+import org.terifan.sourcecodeeditor.JavaSyntaxParser;
+import org.terifan.sourcecodeeditor.SourceEditor;
 
 
 public abstract class AbstractActivityLayout
