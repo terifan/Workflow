@@ -123,7 +123,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 
 		mChildren.clear();
 
-		for (Bundle bundle : aBundle.getBundleArrayList("Children"))
+		for (Bundle bundle : aBundle.getArray("Children").iterable(Bundle.class))
 		{
 			try
 			{

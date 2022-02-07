@@ -98,11 +98,11 @@ public class ColorChooserProperty extends Property<JTextField, Color> implements
 	{
 		if (mColor.getAlpha() != 255)
 		{
-			aBundle.putArray(mLabel, new Array().add(mColor.getRed(), mColor.getGreen(), mColor.getBlue(), mColor.getAlpha()));
+			aBundle.putArray(mLabel, new Array().addAll(mColor.getRed(), mColor.getGreen(), mColor.getBlue(), mColor.getAlpha()));
 		}
 		else
 		{
-			aBundle.putArray(mLabel, new Array().add(mColor.getRed(), mColor.getGreen(), mColor.getBlue()));
+			aBundle.putArray(mLabel, new Array().addAll(mColor.getRed(), mColor.getGreen(), mColor.getBlue()));
 		}
 	}
 
