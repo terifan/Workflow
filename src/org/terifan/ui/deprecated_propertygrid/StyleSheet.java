@@ -59,8 +59,7 @@ public class StyleSheet
 
 		try (Reader in = aScript)
 		{
-			mBundle = new Bundle();
-			mBundle.unmarshalJSON(in);
+			mBundle = Bundle.unmarshalJSON(in);
 		}
 	}
 

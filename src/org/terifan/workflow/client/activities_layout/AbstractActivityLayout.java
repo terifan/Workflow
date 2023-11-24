@@ -19,8 +19,9 @@ import org.terifan.vectorgraphics.Region;
 import org.terifan.vectorgraphics.Anchor;
 import org.terifan.ui.StyleSheet;
 import org.terifan.sourcecodeeditor.Document;
-import org.terifan.sourcecodeeditor.JavaSyntaxParser;
 import org.terifan.sourcecodeeditor.SourceEditor;
+import org.terifan.sourcecodeeditor.StyleMaps;
+import org.terifan.sourcecodeeditor.parsers.JavaSyntaxParser;
 
 
 public abstract class AbstractActivityLayout
@@ -54,7 +55,7 @@ public abstract class AbstractActivityLayout
 		mBounds = new Rectangle();
 		mSource = new Document();
 
-		SourceEditor sourceEditor = new SourceEditor(new JavaSyntaxParser(), mSource);
+		SourceEditor sourceEditor = new SourceEditor(new JavaSyntaxParser(), mSource, StyleMaps.JavaDark);
 		sourceEditor.dontRequestFocus();
 
 		mSwingComponent = new JScrollPane(sourceEditor);
