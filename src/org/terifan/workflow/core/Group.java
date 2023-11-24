@@ -103,7 +103,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 	{
 		super.serialize(aBundle);
 
-		ArrayList<Bundle> list = new ArrayList<>();
+		Array list = new Array();
 
 		for (AbstractActivity activity : mChildren)
 		{
@@ -112,7 +112,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 			list.add(bundle);
 		}
 
-		aBundle.putArray("Children", Array.of(list));
+		aBundle.putArray("Children", list);
 	}
 
 
@@ -123,6 +123,8 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 
 		mChildren.clear();
 
+		if (aBundle.containsKey("Children"))
+		{
 		for (Bundle bundle : aBundle.getArray("Children").iterable(Bundle.class))
 		{
 			try
@@ -137,6 +139,7 @@ public abstract class Group extends AbstractActivity implements Iterable<Abstrac
 			{
 				throw new IllegalStateException(e);
 			}
+		}
 		}
 	}
 
