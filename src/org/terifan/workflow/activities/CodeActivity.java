@@ -7,7 +7,6 @@ import org.terifan.workflow.core.Executable.Name;
 import org.terifan.workflow.core.Leaf;
 import org.terifan.workflow.core.State;
 import org.terifan.workflow.core.WorkflowEngine;
-import org.terifan.util.log.Log;
 
 
 public class CodeActivity extends Leaf
@@ -42,7 +41,7 @@ public class CodeActivity extends Leaf
 	@Override
 	public boolean compile()
 	{
-		Log.out.println("Compiling " + this.getClass().getSimpleName());
+		System.out.println("Compiling " + this.getClass().getSimpleName());
 
 		setState(ActivityState.NONE);
 

@@ -2,7 +2,6 @@ package org.terifan.workflow.core;
 
 import org.terifan.bundle.Bundle;
 import org.terifan.net.rpc.client.RPCConnection;
-import org.terifan.util.log.Log;
 
 
 public class WorkflowEngine
@@ -20,11 +19,11 @@ public class WorkflowEngine
 
 	public boolean compile()
 	{
-		Log.out.println("Start compiling workflow");
+		System.out.println("Start compiling workflow");
 
 		boolean result = mWorkflow.compile();
 
-		Log.out.println("Finished compiling workflow");
+		System.out.println("Finished compiling workflow");
 
 		return result;
 	}
@@ -54,7 +53,7 @@ public class WorkflowEngine
 
 	public void start(State aInState, State aOutState)
 	{
-		Log.out.println("Start executing workflow");
+		System.out.println("Start executing workflow");
 
 		try
 		{
@@ -66,7 +65,7 @@ public class WorkflowEngine
 		}
 		finally
 		{
-			Log.out.println("Finished executing workflow");
+			System.out.println("Finished executing workflow");
 		}
 	}
 

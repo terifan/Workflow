@@ -10,7 +10,6 @@ import org.terifan.workflow.core.WorkflowEngine;
 import org.terifan.workflow.core.ActivityState;
 import org.terifan.workflow.core.Executable.Name;
 import org.terifan.workflow.core.State;
-import org.terifan.util.log.Log;
 
 
 public class MapReduceActivity extends SequentialGroup
@@ -200,8 +199,8 @@ public class MapReduceActivity extends SequentialGroup
 	@Override
 	public void execute(WorkflowEngine aWorkflowEngine, State aInState, State aOutState)
 	{
-		Log.out.println("Exeucting " + getClass().getSimpleName());
-		Log.out.println("State=" + aInState);
+		System.out.println("Exeucting " + getClass().getSimpleName());
+		System.out.println("State=" + aInState);
 
 		mExecutable.setActivity(this);
 

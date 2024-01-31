@@ -3,7 +3,6 @@ package org.terifan.workflow.core;
 import org.terifan.bundle.Bundle;
 import org.terifan.net.rpc.client.RemoteServiceStub;
 import org.terifan.net.rpc.shared.ServiceName;
-import org.terifan.util.log.Log;
 
 
 @ServiceName("RPCRemoteEngine")
@@ -22,7 +21,7 @@ public class RemoteScopeRPCSender extends RemoteServiceStub
 			throw new IllegalStateException((Exception)response);
 		}
 
-		Log.out.println("rpc-response="+response);
+		System.out.println("rpc-response="+response);
 
 		return (State)response;
 	}

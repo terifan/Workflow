@@ -5,7 +5,6 @@ import javax.tools.Diagnostic;
 import javax.tools.DiagnosticCollector;
 import javax.tools.JavaFileObject;
 import org.terifan.util.compiler.MemoryCompiler;
-import org.terifan.util.log.Log;
 
 
 public class Compiler
@@ -66,7 +65,7 @@ public class Compiler
 //			{
 				if (output.length() > 0)
 				{
-					Log.out.println(output);
+					System.out.println(output);
 				}
 //			}
 //			else
@@ -84,7 +83,7 @@ public class Compiler
 				Object instance = cs.newInstance();
 				if (!(instance instanceof Executable))
 				{
-					Log.out.println("Class not an instance of Executable.");
+					System.out.println("Class not an instance of Executable.");
 					return null;
 				}
 				exe = (Executable)instance;
@@ -95,13 +94,13 @@ public class Compiler
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace(Log.out);
+			e.printStackTrace(System.out);
 
 			throw e;
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace(Log.out);
+			e.printStackTrace(System.out);
 
 			throw new IllegalStateException(e);
 		}
