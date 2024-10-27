@@ -1,6 +1,7 @@
 package org.terifan.workflow.server;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
 import java.net.URL;
@@ -76,8 +77,11 @@ public class ServerApplication
 
 			mLog.println(Calendar.now()+" Sending response ("+response.length+" bytes) to "+aRequest.getRemoteAddress().getHostAddress()+" - processing time "+timer+"ms");
 
-			aResponse.setStatusCode(HttpStatusCode.OK);
-			aResponse.setContent(response);
+			aResponse.sendResponseHeaders(HttpStatusCode.OK, 0);
+			try (OutputStream out = aResponse.getResponseBody())
+			{
+				out.write(response);
+			}
 		}
 	};
 }
