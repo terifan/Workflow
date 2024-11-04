@@ -75,8 +75,8 @@ public class WorkflowPaneRenderer extends Thread
 			mWorkflowPane.unlock();
 		}
 
-		mWorkflowPane.invalidate();
-		mWorkflowPane.validate();
+		mWorkflowPane.getComponent().invalidate();
+		mWorkflowPane.getComponent().validate();
 		mWorkflowPane.repaint();
 	}
 }

@@ -18,10 +18,10 @@ public class WorkflowLayout extends SequentialGroupLayout
 		Rectangle bounds = getBounds();
 
 		BufferedImage image = style.getImage("start");
-		aLayer.drawImage(image, bounds.x+(bounds.width-image.getWidth())/2, bounds.y, null);
+		aLayer.drawImage(image, bounds.x+(bounds.width-image.getWidth())/2, bounds.y);
 
 		image = style.getImage("end");
-		aLayer.drawImage(image, bounds.x+(bounds.width-image.getWidth())/2, bounds.y+bounds.height-image.getHeight(), null);
+		aLayer.drawImage(image, bounds.x+(bounds.width-image.getWidth())/2, bounds.y+bounds.height-image.getHeight());
 
 		for (AbstractActivity activity : mGroup)
 		{

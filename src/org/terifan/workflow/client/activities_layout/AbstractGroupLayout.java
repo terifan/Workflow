@@ -77,13 +77,13 @@ public abstract class AbstractGroupLayout extends AbstractActivityLayout // impl
 		{
 			int ix = textBounds.x-button.getWidth()-5;
 			int iy = textBounds.y+(textBounds.height-button.getHeight())/2;
-			aLayer.drawImage(button, ix, iy, null);
+			aLayer.drawImage(button, ix, iy);
 
 			aLayer.add(new Region("menu", ix-4, textBounds.y, textBounds.x-ix+4, textBounds.height, new RegionData(RegionAction.STATE, mActivity, null)));
 		}
 
 		BufferedImage icon = style.getImage("icon");
-		aLayer.drawImage(icon, bounds.x+(bounds.width-icon.getWidth())/2, bounds.y+labelHeight-icon.getHeight()-2, null);
+		aLayer.drawImage(icon, bounds.x+(bounds.width-icon.getWidth())/2, bounds.y+labelHeight-icon.getHeight()-2);
 
 		if (!isCollapsed())
 		{

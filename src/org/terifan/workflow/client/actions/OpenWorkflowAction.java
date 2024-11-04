@@ -34,7 +34,7 @@ public class OpenWorkflowAction extends AbstractAction
 			chooser.setFileFilter(filter);
 			chooser.setSelectedFile(mWorkflowPane.getWorkflowFile());
 
-			if (chooser.showOpenDialog(mWorkflowPane) == JFileChooser.APPROVE_OPTION)
+			if (chooser.showOpenDialog(mWorkflowPane.getComponent()) == JFileChooser.APPROVE_OPTION)
 			{
 				Workflow w = new Workflow();
 

@@ -46,7 +46,7 @@ public abstract class LeafLayout extends AbstractActivityLayout
 		aLayer.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
 		BufferedImage icon = style.getImage("icon");
-		aLayer.drawImage(icon, bounds.x+(24-icon.getWidth())/2, bounds.y+(bounds.height-icon.getHeight())/2, null);
+		aLayer.drawImage(icon, bounds.x+(24-icon.getWidth())/2, bounds.y+(bounds.height-icon.getHeight())/2);
 
 		aLayer.setBackground(null);
 		aLayer.setColor(style.getColor("text"));

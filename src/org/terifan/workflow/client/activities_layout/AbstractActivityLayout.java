@@ -122,7 +122,7 @@ public abstract class AbstractActivityLayout
 		if (mActivity.getState() == ActivityState.COMPILER_ERROR)
 		{
 			BufferedImage image = aStyleSheet.getRoot().getImage("activity_error");
-			aLayer.getCanvas().getLayer("overlay").drawImage(image, mBounds.x+mBounds.width-image.getWidth()-5, mBounds.y-image.getHeight()+3, null);
+			aLayer.getCanvas().getLayer("overlay").drawImage(image, mBounds.x+mBounds.width-image.getWidth()-5, mBounds.y-image.getHeight()+3);
 		}
 
 		if (getTextBubble() != null && getTextBubble().length() > 0)

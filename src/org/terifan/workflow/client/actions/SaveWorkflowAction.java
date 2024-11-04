@@ -32,7 +32,7 @@ public class SaveWorkflowAction extends AbstractAction
 			chooser.setFileFilter(filter);
 			chooser.setSelectedFile(mWorkflowPane.getWorkflowFile());
 
-			if (chooser.showSaveDialog(mWorkflowPane) == JFileChooser.APPROVE_OPTION)
+			if (chooser.showSaveDialog(mWorkflowPane.getComponent()) == JFileChooser.APPROVE_OPTION)
 			{
 				mWorkflowPane.updateActivityState();
 

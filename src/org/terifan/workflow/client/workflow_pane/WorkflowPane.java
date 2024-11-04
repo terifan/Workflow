@@ -6,6 +6,8 @@ import org.terifan.workflow.client.activities_layout.AbstractActivityLayout;
 import java.util.HashMap;
 import java.util.TooManyListenersException;
 import javax.swing.Action;
+import javax.swing.ActionMap;
+import javax.swing.InputMap;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -41,19 +43,23 @@ public class WorkflowPane extends Canvas
 	public WorkflowPane(ClientApplication aApplication) throws IllegalAccessException, InstantiationException
 	{
 		mApplication = aApplication;
-		
+
 		mWorkflow = new Workflow();
 		mLayouts = new HashMap<>();
 
-		super.getActionMap().put(Actions.SaveWorkflow, new SaveWorkflowAction(this));
-		super.getActionMap().put(Actions.OpenWorkflow, new OpenWorkflowAction(this));
-		super.getActionMap().put(Actions.RunWorkflow, new RunWorkflowAction(this));
-		super.getActionMap().put(Actions.DeleteActivity, new DeleteActivityAction(this));
+		JComponent component = getComponent();
+		ActionMap actionMap = component.getActionMap();
+		InputMap inputMap = component.getInputMap();
 
-		super.getInputMap().put(KeyStroke.getKeyStroke("ctrl S"), Actions.SaveWorkflow);
-		super.getInputMap().put(KeyStroke.getKeyStroke("ctrl O"), Actions.OpenWorkflow);
-		super.getInputMap().put(KeyStroke.getKeyStroke("ctrl R"), Actions.RunWorkflow);
-		super.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0), Actions.DeleteActivity);
+		actionMap.put(Actions.SaveWorkflow, new SaveWorkflowAction(this));
+		actionMap.put(Actions.OpenWorkflow, new OpenWorkflowAction(this));
+		actionMap.put(Actions.RunWorkflow, new RunWorkflowAction(this));
+		actionMap.put(Actions.DeleteActivity, new DeleteActivityAction(this));
+
+		inputMap.put(KeyStroke.getKeyStroke("ctrl S"), Actions.SaveWorkflow);
+		inputMap.put(KeyStroke.getKeyStroke("ctrl O"), Actions.OpenWorkflow);
+		inputMap.put(KeyStroke.getKeyStroke("ctrl R"), Actions.RunWorkflow);
+		inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0), Actions.DeleteActivity);
 
 		addActivity(mWorkflow);
 
@@ -61,22 +67,22 @@ public class WorkflowPane extends Canvas
 
 		mRenderStateListener = new WorkflowPaneRenderStateListener(this);
 
-		super.setTransferHandler(new WorkflowPaneTransferHandler(this));
-		super.addKeyListener(new WorkflowPaneKeyListener(this));
-		super.addMouseListener(weml);
-		super.addMouseMotionListener(weml);
-		super.setFocusable(true);
+		component.setTransferHandler(new WorkflowPaneTransferHandler(this));
+		component.addKeyListener(new WorkflowPaneKeyListener(this));
+		component.addMouseListener(weml);
+		component.addMouseMotionListener(weml);
+		component.setFocusable(true);
 		super.addRenderStateListener(mRenderStateListener);
 
 		try
 		{
-			super.getDropTarget().addDropTargetListener(new WorkflowPaneDropTargetListener(this));
+			component.getDropTarget().addDropTargetListener(new WorkflowPaneDropTargetListener(this));
 		}
 		catch (TooManyListenersException e)
 		{
 			e.printStackTrace();
 		}
-		
+
 		mSelections.addChangeListener(mRenderStateListener);
 	}
 
@@ -109,7 +115,7 @@ public class WorkflowPane extends Canvas
 		addActivity(aWorkflow);
 	}
 
-	
+
 	public File getWorkflowFile()
 	{
 		return mWorkflowFile;
@@ -120,17 +126,17 @@ public class WorkflowPane extends Canvas
 	{
 		mWorkflowFile = aFile;
 	}
-	
+
 
 	public AbstractActivityLayout getActivityLayout(AbstractActivity aActivity)
 	{
 		AbstractActivityLayout layout = mLayouts.get(aActivity);
-		
+
 		if (layout == null)
 		{
 			throw new IllegalStateException("No layout of activity: " + aActivity);
 		}
-		
+
 		return layout;
 	}
 
@@ -150,7 +156,7 @@ public class WorkflowPane extends Canvas
 	private void addActivityLayout(AbstractActivity aActivity) throws InstantiationException, IllegalAccessException
 	{
 		AbstractActivityLayout layout;
-		
+
 		if (aActivity instanceof Workflow)
 		{
 			layout = new WorkflowLayout();
@@ -221,10 +227,10 @@ public class WorkflowPane extends Canvas
 			}
 		}
 	}
-	
-	
+
+
 	public Action getAction(Actions aAction)
 	{
-		return super.getActionMap().get(aAction);
+		return getComponent().getActionMap().get(aAction);
 	}
 }

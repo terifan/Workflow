@@ -67,7 +67,7 @@ public class ClientApplication extends JFrame
 		mSplitPane2 = Utilities.stripBorder(new JSplitPane(JSplitPane.VERTICAL_SPLIT, new JScrollPane(new JLabel("")), mPropertyGrid));
 		mSplitPane2.setResizeWeight(0.75);
 
-		mSplitPane1 = Utilities.stripBorder(new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(mActivityToolbox), new JScrollPane(mWorkflowPane)));
+		mSplitPane1 = Utilities.stripBorder(new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, new JScrollPane(mActivityToolbox), new JScrollPane(mWorkflowPane.getComponent())));
 		mSplitPane1.setResizeWeight(0.0);
 
 		mSplitPane0 = Utilities.stripBorder(new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, mSplitPane1, mSplitPane2));

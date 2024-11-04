@@ -28,7 +28,7 @@ class WorkflowPaneMouseListener extends MouseAdapter
 		try
 		{
 			mPressPoint = aEvent.getPoint();
-			mWorkflowPane.requestFocus();
+			mWorkflowPane.getComponent().requestFocus();
 
 			Region region = mWorkflowPane.getRegionAt(RegionFilter.STATE, mPressPoint);
 
@@ -68,9 +68,9 @@ class WorkflowPaneMouseListener extends MouseAdapter
 
 				if (dist > 5)
 				{
-					WorkflowPaneTransferHandler handler = (WorkflowPaneTransferHandler)mWorkflowPane.getTransferHandler();
+					WorkflowPaneTransferHandler handler = (WorkflowPaneTransferHandler)mWorkflowPane.getComponent().getTransferHandler();
 					handler.setDragPoint(mPressPoint);
-					handler.exportAsDrag(mWorkflowPane, aEvent, TransferHandler.MOVE);
+					handler.exportAsDrag(mWorkflowPane.getComponent(), aEvent, TransferHandler.MOVE);
 
 					mPressPoint = null;
 				}
