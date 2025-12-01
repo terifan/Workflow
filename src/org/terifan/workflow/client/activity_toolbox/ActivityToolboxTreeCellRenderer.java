@@ -6,7 +6,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultTreeCellRenderer;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 
 
 class ActivityToolboxTreeCellRenderer extends DefaultTreeCellRenderer

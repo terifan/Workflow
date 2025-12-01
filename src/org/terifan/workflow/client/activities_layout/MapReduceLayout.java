@@ -6,7 +6,7 @@ import org.terifan.workflow.client.workflow_pane.RegionAction;
 import org.terifan.workflow.client.workflow_pane.RegionData;
 import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.vectorgraphics.Layer;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 
 
 

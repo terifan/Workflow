@@ -25,7 +25,7 @@ import org.terifan.workflow.client.activities_layout.WorkflowLayout;
 import org.terifan.workflow.client.activity_toolbox.ActivityToolbox;
 import org.terifan.workflow.core.ActivityState;
 import org.terifan.workflow.core.Group;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.vectorgraphics.Canvas;
 
 

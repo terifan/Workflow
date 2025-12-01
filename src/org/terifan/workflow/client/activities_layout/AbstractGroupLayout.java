@@ -9,7 +9,7 @@ import org.terifan.workflow.client.workflow_pane.WorkflowPane;
 import org.terifan.workflow.core.Group;
 import org.terifan.workflow.client.workflow_pane.RegionAction;
 import org.terifan.workflow.client.workflow_pane.RegionData;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Region;
 import org.terifan.workflow.util.GradientStyleFactory;

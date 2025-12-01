@@ -17,7 +17,7 @@ import static org.terifan.workflow.client.activities_layout.DefaultLayout.mObjec
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Region;
 import org.terifan.vectorgraphics.Anchor;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.sourcecodeeditor.Document;
 import org.terifan.sourcecodeeditor.SourceEditor;
 import org.terifan.sourcecodeeditor.StyleMaps;

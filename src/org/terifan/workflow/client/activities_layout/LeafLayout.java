@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 import org.terifan.vectorgraphics.Anchor;
 import org.terifan.workflow.util.GradientStyleFactory;

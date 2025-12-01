@@ -2,7 +2,7 @@ package org.terifan.workflow.client.activities_layout;
 
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.vectorgraphics.Layer;
 
 

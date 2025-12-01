@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import org.terifan.workflow.core.AbstractActivity;
 import org.terifan.vectorgraphics.Layer;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 
 
 public class WorkflowLayout extends SequentialGroupLayout

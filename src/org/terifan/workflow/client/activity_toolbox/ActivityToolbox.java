@@ -31,7 +31,7 @@ import org.terifan.workflow.client.activities_layout.MapReduceLayout;
 import org.terifan.workflow.client.activities_layout.ParallelLayout;
 import org.terifan.workflow.client.activities_layout.SequentialGroupLayout;
 import org.terifan.workflow.client.activities_layout.WhileLayout;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 
 
 public class ActivityToolbox extends JTree

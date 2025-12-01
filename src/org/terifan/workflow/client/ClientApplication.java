@@ -22,7 +22,7 @@ import org.terifan.workflow.client.activity_toolbox.ActivityToolbox;
 import org.terifan.workflow.client.workflow_pane.WorkflowPane;
 import org.terifan.workflow.core.ConnectionPool;
 import org.terifan.workflow.server.ServerApplication;
-import org.terifan.ui.StyleSheet;
+import org.terifan.workflow.util.StyleSheet;
 import org.terifan.ui.Utilities;
 import org.terifan.ui.deprecated_propertygrid.PropertyGrid;
 import org.terifan.ui.deprecated_propertygrid.PropertyGridModel;

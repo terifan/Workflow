@@ -6,12 +6,11 @@ import java.io.PrintStream;
 import java.net.InetAddress;
 import java.net.URL;
 import java.net.UnknownHostException;
-import org.terifan.net.http.server.HttpServerHandler;
+import org.terifan.net.http.server.HttpHandler;
+import org.terifan.net.http.server.HttpServer;
 import org.terifan.net.http.server.HttpServerRequest;
 import org.terifan.net.http.server.HttpServerResponse;
-import org.terifan.net.http.server.HttpStatusCode;
 import org.terifan.net.rpc.server.RPCServer;
-import org.terifan.net.http.server.SimpleHttpServer;
 import org.terifan.net.rpc.server.ServiceFactory;
 import org.terifan.util.Calendar;
 
@@ -22,7 +21,7 @@ public class ServerApplication
 	private URL mAddress;
 	private RemoteScopeRPCAuthenticator mAuthenticator;
 	private RPCServer mServer;
-	private SimpleHttpServer mHttpServer;
+	private HttpServer mHttpServer;
 
 
 	public ServerApplication(PrintStream aLog, URL aAddress)
@@ -47,7 +46,7 @@ public class ServerApplication
 
 		mLog.println("Initializing runtime listening to " + mAddress);
 
-		mHttpServer = new SimpleHttpServer(mAddress.getPort(), InetAddress.getByName(mAddress.getHost()), mRequestHandler);
+		mHttpServer = new HttpServer(mAddress.getPort(), InetAddress.getByName(mAddress.getHost()), mRequestHandler);
 		mHttpServer.start(false);
 
 		mLog.println("Runtime started, ready to receive work.");
@@ -60,7 +59,7 @@ public class ServerApplication
 	}
 
 
-	private transient HttpServerHandler mRequestHandler = new HttpServerHandler()
+	private transient HttpHandler mRequestHandler = new HttpHandler()
 	{
 		@Override
 		public void service(HttpServerRequest aRequest, HttpServerResponse aResponse) throws IOException
@@ -77,8 +76,8 @@ public class ServerApplication
 
 			mLog.println(Calendar.now()+" Sending response ("+response.length+" bytes) to "+aRequest.getRemoteAddress().getHostAddress()+" - processing time "+timer+"ms");
 
-			aResponse.sendResponseHeaders(HttpStatusCode.OK, 0);
-			try (OutputStream out = aResponse.getResponseBody())
+			aResponse.setHttpStatusCode(200);
+			try (OutputStream out = aResponse.getResponseStream())
 			{
 				out.write(response);
 			}
